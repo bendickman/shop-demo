@@ -39,7 +39,7 @@ namespace ShopDemo.Api
             });
 
             //ensure Mediatr picks up the handlers in separate assemblies, use any class in the given assembly
-            services.AddMediatR(typeof(Core.Features.Category.List).Assembly);
+            services.AddMediatR(typeof(Core.Features.Category.GetCategoriesHandler).Assembly);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

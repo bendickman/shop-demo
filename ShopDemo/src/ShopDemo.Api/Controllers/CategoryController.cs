@@ -20,7 +20,7 @@ namespace ShopDemo.Api.Controllers
         [HttpGet]
         public async Task<IActionResult> List()
         {
-            var response = await _mediator.Send(new List.GetCategoriesQuery());
+            var response = await _mediator.Send(new GetCategoriesQuery());
 
             return Json(response);
         }
