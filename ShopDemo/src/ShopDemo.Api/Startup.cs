@@ -8,6 +8,9 @@ using Microsoft.OpenApi.Models;
 using MediatR;
 using System;
 using System.Reflection;
+using System.Data;
+using System.Data.SqlClient;
+using ShopDemo.Shared.Data;
 
 namespace ShopDemo.Api
 {
@@ -38,8 +41,17 @@ namespace ShopDemo.Api
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Shop Demo API", Version = "v1.0" });
             });
 
+            services.AddAutoMapper(typeof(Core.Features.Category.GetCategoriesList.GetCategoriesListHandler).Assembly);
+
             //ensure Mediatr picks up the handlers in separate assemblies, use any class in the given assembly
-            services.AddMediatR(typeof(Core.Features.Category.GetCategoriesHandler).Assembly);
+            services.AddMediatR(typeof(Core.Features.Category.GetCategoriesList.GetCategoriesListHandler).Assembly);
+
+            services.AddSingleton<ApplicationSettings>();
+
+            services.AddScoped(ConfigureDbConnection);
+
+            services.AddScoped<IDatabaseQueryProvider, DapperDatabaseQueryProvider>();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -62,6 +74,15 @@ namespace ShopDemo.Api
             {
                 endpoints.MapControllers();
             });
+        }
+
+        private IDbConnection ConfigureDbConnection(IServiceProvider serviceProvider)
+        {
+            var applicationSettings = serviceProvider.GetRequiredService<ApplicationSettings>();
+
+            var sqlConnection = new SqlConnection(applicationSettings.ConnectionString);
+
+            return sqlConnection;
         }
     }
 }

@@ -1,7 +1,6 @@
-﻿using MediatR;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
-using ShopDemo.Api.Core.Features.Category;
+using ShopDemo.Api.Core.Features.Category.GetCategoriesList;
 
 namespace ShopDemo.Api.Controllers
 {
@@ -10,17 +9,11 @@ namespace ShopDemo.Api.Controllers
     [Route("api/v{version:apiVersion}/category")]
     public class CategoryController : BaseController
     {
-        private readonly IMediator _mediator;
-
-        public CategoryController(IMediator mediator)
-        {
-            _mediator = mediator;
-        }
-
         [HttpGet]
+        [Route("list")]
         public async Task<IActionResult> List()
         {
-            var response = await _mediator.Send(new GetCategoriesQuery());
+            var response = await Mediator.Send(new GetCategoriesListQuery());
 
             return Json(response);
         }

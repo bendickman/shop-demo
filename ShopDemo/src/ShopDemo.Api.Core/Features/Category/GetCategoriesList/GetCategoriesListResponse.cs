@@ -1,10 +1,9 @@
 ﻿using ShopDemo.Shared.Base;
-using ShopDemo.Shared.Dto;
 using System.Collections.Generic;
 
-namespace ShopDemo.Api.Core.Features.Category
+namespace ShopDemo.Api.Core.Features.Category.GetCategoriesList
 {
-    public class GetCategoriesResponse : BaseResponse
+    public class GetCategoriesListResponse : BaseResponse
     {
         public IEnumerable<CategoryDto> Categories { get; set; }
     }
