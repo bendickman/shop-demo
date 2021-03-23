@@ -8,7 +8,9 @@ Use these instructions to get the project up and running.
 
 ### Prerequisites
 
-TODO
+You will need the following tools
+
+- [.Net 5](https://dotnet.microsoft.com/download/dotnet/5.0)
 
 ### Setup
 
