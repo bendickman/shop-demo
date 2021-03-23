@@ -2,6 +2,6 @@
 {
     public interface IDatabaseQueryProvider
     {
-        QueryCommand GetCommand(string key);
+        QueryCommand GetCommand(string key, object parameters = null);
     }
 }

@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using ShopDemo.Api.Core.Mappings;
 
-namespace ShopDemo.Api.Core.Features.Category.GetCategoriesList
+namespace ShopDemo.Api.Core.Data
 {
     public class CategoryDto : IMapFrom<Shared.Domain.Category>
     {

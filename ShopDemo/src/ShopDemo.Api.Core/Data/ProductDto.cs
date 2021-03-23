@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using ShopDemo.Api.Core.Mappings;
 
-namespace ShopDemo.Api.Core.Features.Product.GetFeaturedProducts
+namespace ShopDemo.Api.Core.Data
 {
     public class ProductDto : IMapFrom<Shared.Domain.Product>
     {

@@ -15,8 +15,4 @@
     <ProjectReference Include="..\ShopDemo.Shared\ShopDemo.Shared.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Data\" />
-  </ItemGroup>
-
 </Project>

@@ -11,6 +11,7 @@ namespace ShopDemo.Api.Controllers
     {
         [HttpGet]
         [Route("featured")]
+        [ProducesDefaultResponseType]
         public async Task<IActionResult> Featured()
         {
             var response = await Mediator.Send(new GetFeaturedProductsQuery());

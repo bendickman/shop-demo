@@ -7,6 +7,7 @@ using ShopDemo.Shared.Data;
 using ShopDemo.Shared;
 using AutoMapper;
 using System.Collections.Generic;
+using ShopDemo.Api.Core.Data;
 
 namespace ShopDemo.Api.Core.Features.Category.GetCategoriesList
 {

@@ -6,6 +6,7 @@
         {
             public const string GetCategories = nameof(GetCategories);
             public const string GetFeaturedProducts = nameof(GetFeaturedProducts);
+            public const string GetProductsByCategory = nameof(GetProductsByCategory);
         }
     }
 }

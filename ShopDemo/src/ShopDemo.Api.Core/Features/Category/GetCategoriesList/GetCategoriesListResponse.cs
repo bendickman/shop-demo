@@ -1,4 +1,5 @@
-﻿using ShopDemo.Shared.Base;
+﻿using ShopDemo.Api.Core.Data;
+using ShopDemo.Shared.Base;
 using System.Collections.Generic;
 
 namespace ShopDemo.Api.Core.Features.Category.GetCategoriesList
