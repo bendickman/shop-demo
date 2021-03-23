@@ -29,9 +29,9 @@ namespace ShopDemo.Api.Core.Features.Category.GetCategoriesList
 
             var commandDefinition = new CommandDefinition(queryCommand.Query, queryCommand.Parameters);
 
-            var result = await _dbConnection.QueryAsync<Shared.Domain.Category>(commandDefinition);
+            var result = await _dbConnection.QueryAsync<Shared.Domain.Category>(commandDefinition).ConfigureAwait(false);
 
-            var categories = _mapper.Map <IEnumerable<CategoryDto>>(result);
+            var categories = _mapper.Map<IEnumerable<CategoryDto>>(result);
 
             return new GetCategoriesListResponse { Categories = categories };
         }

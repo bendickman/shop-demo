@@ -6,11 +6,10 @@ namespace ShopDemo.Api.Controllers
 {
     [ApiController]
     [ApiVersion("1.0")]
-    [Route("api/v{version:apiVersion}/category")]
+    [Route("api/v{version:apiVersion}/categories")]
     public class CategoryController : BaseController
     {
         [HttpGet]
-        [Route("list")]
         public async Task<IActionResult> List()
         {
             var response = await Mediator.Send(new GetCategoriesListQuery());

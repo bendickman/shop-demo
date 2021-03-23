@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace ShopDemo.Shared.Data
 {
@@ -14,7 +10,8 @@ namespace ShopDemo.Shared.Data
         {
             Commands = new Dictionary<string, string>
             {
-                { Constants.Data.GetCategories, "EXEC [dbo].[usp_GetCategories]" }
+                { Constants.Data.GetCategories, "EXEC [dbo].[usp_GetCategories]" },
+                { Constants.Data.GetFeaturedProducts, "EXEC [dbo].[usp_GetFeaturedProducts]" }
             };
 
         }
