@@ -16,7 +16,7 @@ namespace ShopDemo.Api.Controllers
         {
             var response = await Mediator.Send(new GetFeaturedProductsQuery());
 
-            return Json(response);
+            return Json(response.Products);
         }
     }
 }

@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "ShopDemo.Console": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "API_BASE_URL": "https://localhost:44320/api/v1.0/"
+      }
+    }
+  }
+}

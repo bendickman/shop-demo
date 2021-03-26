@@ -15,6 +15,11 @@ namespace ShopDemo.Api
             configuration.Bind(this);
         }
         public string ConnectionString { get; set; }
+        
+        public class ApiSettings
+        {
+            public string BaseUrl { get; set; }
+        }
     }
 
     

@@ -16,7 +16,7 @@ namespace ShopDemo.Api.Controllers
         {
             var response = await Mediator.Send(new GetCategoriesListQuery());
 
-            return Json(response);
+            return Json(response.Categories);
         }
 
         [HttpGet]
@@ -26,7 +26,7 @@ namespace ShopDemo.Api.Controllers
         {
             var response = await Mediator.Send(new GetProductsByCategoryQuery { CategoryId = categoryId }).ConfigureAwait(false);
 
-            return Json(response);
+            return Json(response.Products);
         }
     }
 }
