@@ -1,9 +1,9 @@
-﻿using ShopDemo.Console.Commands;
+﻿using ShopDemo.Api.Core.Commands;
 using System.Threading.Tasks;
 using static System.Console;
 
 namespace ShopDemo.Console
-{
+{ 
     public class ShopDemoProgram : IProgramRunnable
     {
         private readonly ICommandProvider _commandProvider;
